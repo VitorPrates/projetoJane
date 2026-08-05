@@ -11,4 +11,45 @@ html{
 body{
     width:100%;
     height:100%;
+    display: grid;
+    grid-template-rows: 102px 1fr 50px;
+    // font-family: ;
+}
+:root
+{
+    --escuro1:#503400;
+    --claro1:#FFC889;
+    --claro2:#FFD993;
+    --branco: white;
+    --preto: black;
+}
+header
+{
+    width: 100%;
+    height: 100%;
+    background-color: var(--escuro1);
+}
+main
+{
+    width: 100%;
+    height: 100%;
+    background-color: var(--claro2);
+}
+footer
+{
+    background-color: var(--escuro1);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    p
+    {
+        color: var(--branco);
+        a
+        {
+            text-decoration: none;
+            color: var(--branco);
+        }
+    }
 }
