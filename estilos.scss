@@ -76,6 +76,13 @@ main
             height: 250px;
             background-color: black;
             border-radius: 15px;
+            display: flex;
+            overflow: hidden;
+            img
+            {
+                transition: 0.3s ease-in-out;
+                transform: translateX(0%);
+            }
         }
     }
 }
