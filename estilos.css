@@ -23,8 +23,10 @@ body {
 :root {
   --escuro1:#503400;
   --escuro2:#352200;
+  --escuro3:#FFAD65;
   --claro1:#FFC889;
   --claro2:#FFD993;
+  --claro3:#FFDFBA;
   --borda-clara:#FFA705;
   --branco: white;
   --preto: black;
@@ -120,15 +122,31 @@ main .content .display_principal .display_main {
 main .content .zapzap {
   right: 2%;
   top: 0;
-  width: 90px;
-  aspect-ratio: 1/1;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: end;
   justify-content: center;
+  background-color: red;
   position: absolute;
+  overflow: hidden;
 }
 main .content .zapzap img {
-  width: 100%;
+  width: 50%;
+  transform: translateX(10px);
+}
+main .content .zapzap .campo_conversas_zap {
+  width: 225px;
+  height: 425px;
+  background-color: yellow;
+  transform: translateX(100%);
+  transition: 0.3s ease-in-out;
+}
+main .content .zapzap .mostrar_zap {
+  transform: translateX(0%);
 }
 
 footer {

@@ -1,7 +1,12 @@
+//Banner e imagens dos clientes
 const banner_imgs = document.querySelectorAll(".banner_img")
 let banner_atual = 0
 const clientes_imgs = document.querySelectorAll(".cliente_img")
 let clientes_atual = 0
+
+//conversa via whatsapp flutuante
+let zap_icon = document.querySelector(".conversar_zap")
+let campo_conversa_zap = document.querySelector(".campo_conversas_zap")
 
 
 function mudar_banner()
@@ -28,3 +33,7 @@ function mudar_cliente()
 }
 setInterval(mudar_banner,5000)
 setInterval(mudar_cliente,2100)
+
+zap_icon.addEventListener("click", () =>{
+    campo_conversa_zap.classList.toggle("mostrar_zap")
+})
