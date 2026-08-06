@@ -17,7 +17,7 @@ body {
   height: 100%;
   display: grid;
   grid-template-rows: 102px 1fr 50px;
-  font-family: Shippori Antique, SN pro, monospace;
+  font-family: SN pro, monospace;
 }
 
 :root {
@@ -30,6 +30,8 @@ body {
   --borda-clara:#FFA705;
   --branco: white;
   --preto: black;
+  --block: #787878;
+  --good:#00A925;
 }
 
 header {
@@ -50,6 +52,7 @@ header nav button {
   border-radius: 10px;
   color: var(--branco);
   padding: 5px 22px;
+  cursor: pointer;
 }
 header nav :nth-child(1) {
   text-decoration: underline;
@@ -113,11 +116,60 @@ main .content .display_principal p {
   padding-left: 20px;
   font-size: 20px;
 }
-main .content .display_principal .display_main {
+main .content .display_principal .display_main_promocoes {
   width: 100%;
   height: 90%;
   border: 1px solid;
   border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: baseline;
+}
+main .content .display_principal .display_main_promocoes .card_produto {
+  background-color: var(--claro2);
+  width: 186px;
+  height: 247px;
+  border: 1px solid var(--preto);
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 142px 1fr 1fr 1fr 1fr;
+  justify-content: baseline;
+}
+main .content .display_principal .display_main_promocoes .card_produto .img_produto {
+  width: 100%;
+  height: 100%;
+  background-color: var(--branco);
+  border-radius: 5px;
+}
+main .content .display_principal .display_main_promocoes .card_produto .titulo_produto {
+  font-size: 18px;
+  padding: 0 5px;
+  height: 100%;
+  font-weight: lighter;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+main .content .display_principal .display_main_promocoes .card_produto .preco_original {
+  font-family: Shippori Antique, monospace;
+  color: var(--block);
+  text-decoration: line-through;
+  font-size: 15px;
+}
+main .content .display_principal .display_main_promocoes .card_produto .preco_atual {
+  font-size: 22px;
+  font-family: Shippori Antique, monospace;
+}
+main .content .display_principal .display_main_promocoes .card_produto .preco_atual span {
+  font-size: 15px;
+}
+main .content .display_principal .display_main_promocoes .card_produto .percentual_desconto {
+  font-size: 17px;
+  text-align: center;
+  color: var(--good);
 }
 main .content .zapzap {
   right: 2%;
@@ -130,20 +182,66 @@ main .content .zapzap {
   flex-direction: column;
   align-items: end;
   justify-content: center;
-  background-color: red;
+  gap: 10px;
   position: absolute;
   overflow: hidden;
 }
 main .content .zapzap img {
   width: 50%;
-  transform: translateX(10px);
+  transform: translateX(20px);
+  cursor: pointer;
 }
 main .content .zapzap .campo_conversas_zap {
   width: 225px;
   height: 425px;
-  background-color: yellow;
+  background-color: var(--claro3);
+  border-radius: 5px;
   transform: translateX(100%);
   transition: 0.3s ease-in-out;
+  display: grid;
+  grid-template-rows: 1fr 35px;
+  overflow: hidden;
+}
+main .content .zapzap .campo_conversas_zap .tela_conversas {
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  align-content: baseline;
+  gap: 5px;
+}
+main .content .zapzap .campo_conversas_zap .tela_conversas .mensagem_nossa, main .content .zapzap .campo_conversas_zap .tela_conversas .sua_mensagem {
+  font-size: 17px;
+  padding: 0 5px;
+  height: -moz-fit-content;
+  height: fit-content;
+  border-radius: 0px 5px 5px 5px;
+  background-color: var(--escuro3);
+}
+main .content .zapzap .campo_conversas_zap .tela_conversas .mensagem_nossa {
+  grid-column: 1/9;
+}
+main .content .zapzap .campo_conversas_zap .tela_conversas .sua_mensagem {
+  grid-column: 3/-1;
+  background-color: var(--claro1);
+}
+main .content .zapzap .campo_conversas_zap .envio_mensagem {
+  background-color: var(--escuro3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .content .zapzap .campo_conversas_zap .envio_mensagem form input {
+  width: 190px;
+  height: 24px;
+  padding: 0 5px;
+  outline: none;
+  border: 0.5px solid var(--preto);
+  border-radius: 5px;
+}
+main .content .zapzap .campo_conversas_zap .envio_mensagem svg {
+  cursor: pointer;
 }
 main .content .zapzap .mostrar_zap {
   transform: translateX(0%);
