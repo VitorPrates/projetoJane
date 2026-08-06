@@ -58,7 +58,7 @@ main {
   height: 100%;
   background-color: var(--claro2);
   display: grid;
-  grid-template-rows: 285px 70%;
+  grid-template-rows: 275px 70%;
 }
 main .carrossel {
   width: 100%;
@@ -78,6 +78,43 @@ main .carrossel .display-carrossel {
 main .carrossel .display-carrossel img {
   transition: 0.3s ease-in-out;
   transform: translateX(0%);
+}
+main .content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+main .content aside p {
+  font-size: 20px;
+  text-align: center;
+}
+main .content aside .display-cortes {
+  width: 298px;
+  height: 530px;
+  overflow: hidden;
+  background-color: white;
+  display: flex;
+  border: 1px solid var(--escuro2);
+  border-radius: 10px;
+}
+main .content aside .display-cortes img {
+  transition: 0.2s ease-in-out;
+  transform: translateX(0%);
+}
+main .content .display_principal {
+  width: 70%;
+  padding: 0 10px;
+}
+main .content .display_principal p {
+  padding-left: 20px;
+  font-size: 20px;
+}
+main .content .display_principal .display_main {
+  width: 100%;
+  height: 90%;
+  border: 1px solid;
+  border-radius: 10px;
 }
 
 footer {
