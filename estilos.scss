@@ -64,7 +64,7 @@ main
 {
     width: 100%;
     height: 100%;
-    background-color: var(--claro2);
+    background-color: var(--claro1);
     display: grid;
     grid-template-rows: max(275px) 70%;
     .carrossel
@@ -152,6 +152,7 @@ main
                     display: grid;
                     grid-template-columns: 1fr;
                     grid-template-rows: 142px 1fr 1fr 1fr 1fr;
+                    grid-template-columns: 65% 35%;
                     justify-content: baseline;
                     .img_produto
                     {
@@ -159,6 +160,7 @@ main
                         height: 100%;
                         background-color: var(--branco);
                         border-radius: 5px;
+                        grid-column: 1 / -1;
                     }
                     .titulo_produto
                     {
@@ -169,29 +171,42 @@ main
                         text-overflow: ellipsis;
                         white-space: nowrap; 
                         overflow: hidden;
+                        grid-column: 1 / -1;
                     }
                     .preco_original
                     {
                        font-family: Shippori Antique, monospace; 
+                       grid-column: 1 / -1;
                         color: var(--block);
                         text-decoration: line-through;
                         font-size: 15px;
+                        padding: 0 5px;
                     }
                     .preco_atual
                     {
                         font-size: 22px;
                         font-family: Shippori Antique, monospace; 
+                        grid-column: 1;
                         span
                         {
                             font-size: 15px;
                         }
+                        padding: 0 5px;
                     }
                     .percentual_desconto
                     {
                         font-size: 17px;
+                        grid-column: 1 / -1;
                         text-align: center;
                         color: var(--good);
+                        padding: 0;
                     }
+                }
+                .avaliacao_produto
+                {
+                    grid-column: 2;
+                    grid-row: 4;
+                    font-size: 17px;
                 }
             }
         }

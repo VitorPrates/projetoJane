@@ -61,7 +61,7 @@ header nav :nth-child(1) {
 main {
   width: 100%;
   height: 100%;
-  background-color: var(--claro2);
+  background-color: var(--claro1);
   display: grid;
   grid-template-rows: 275px 70%;
 }
@@ -136,6 +136,7 @@ main .content .display_principal .display_main_promocoes .card_produto {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 142px 1fr 1fr 1fr 1fr;
+  grid-template-columns: 65% 35%;
   justify-content: baseline;
 }
 main .content .display_principal .display_main_promocoes .card_produto .img_produto {
@@ -143,6 +144,7 @@ main .content .display_principal .display_main_promocoes .card_produto .img_prod
   height: 100%;
   background-color: var(--branco);
   border-radius: 5px;
+  grid-column: 1/-1;
 }
 main .content .display_principal .display_main_promocoes .card_produto .titulo_produto {
   font-size: 18px;
@@ -152,24 +154,38 @@ main .content .display_principal .display_main_promocoes .card_produto .titulo_p
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  grid-column: 1/-1;
 }
 main .content .display_principal .display_main_promocoes .card_produto .preco_original {
   font-family: Shippori Antique, monospace;
+  grid-column: 1/-1;
   color: var(--block);
   text-decoration: line-through;
   font-size: 15px;
+  padding: 0 5px;
 }
 main .content .display_principal .display_main_promocoes .card_produto .preco_atual {
   font-size: 22px;
   font-family: Shippori Antique, monospace;
+  grid-column: 1;
 }
 main .content .display_principal .display_main_promocoes .card_produto .preco_atual span {
   font-size: 15px;
 }
+main .content .display_principal .display_main_promocoes .card_produto .preco_atual {
+  padding: 0 5px;
+}
 main .content .display_principal .display_main_promocoes .card_produto .percentual_desconto {
   font-size: 17px;
+  grid-column: 1/-1;
   text-align: center;
   color: var(--good);
+  padding: 0;
+}
+main .content .display_principal .display_main_promocoes .avaliacao_produto {
+  grid-column: 2;
+  grid-row: 4;
+  font-size: 17px;
 }
 main .content .zapzap {
   right: 2%;
