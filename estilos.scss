@@ -126,6 +126,9 @@ main
         {
             width: 70%;
             padding: 0 10px;
+            position: relative;
+            // background-color: red;
+            overflow: hidden;
             p
             {
                 padding-left: 20px;
@@ -133,7 +136,7 @@ main
             }
             .display_main_promocoes
             {
-                width: 100%;
+                width: 99%;
                 height: 90%;
                 border: 1px solid;
                 border-radius: 10px;
@@ -142,6 +145,10 @@ main
                 flex-wrap: wrap;
                 align-items: baseline;
                 justify-content: baseline;
+                position: absolute;
+                transition: 0.5s ease-in-out;
+                // left: 0%;
+                transform: translateX(-0%);
                 .card_produto
                 {
                     background-color: var(--claro2);
@@ -209,8 +216,41 @@ main
                     font-size: 17px;
                 }
             }
+            .display_main_servicos
+            {
+                width: 99%;
+                height: 90%;
+                border: 1px solid;
+                border-radius: 10px;
+                padding: 10px;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: baseline;
+                justify-content: baseline;
+                position: absolute;
+                // left: 0%;
+                background-color: yellow;
+                transform: translateX(-0%);
+                transition: 0.5s ease-in-out;
+            }
+            .display_main_contato
+            {
+                width: 99%;
+                height: 90%;
+                border: 1px solid;
+                border-radius: 10px;
+                padding: 10px;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: baseline;
+                justify-content: baseline;
+                position: absolute;
+                // left: 0%;
+                background-color: red;
+                transform: translateX(110%);
+                transition: 0.5s ease-in-out;
+            }
         }
-        
         .zapzap
         {
             right: 2%;
