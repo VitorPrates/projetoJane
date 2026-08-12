@@ -203,7 +203,6 @@ main .content .display_principal .display_main_servicos {
   align-items: baseline;
   justify-content: baseline;
   position: absolute;
-  background-color: yellow;
   transform: translateX(110%);
   transition: 0.5s ease-in-out;
 }
@@ -218,7 +217,6 @@ main .content .display_principal .display_main_contato {
   align-items: baseline;
   justify-content: baseline;
   position: absolute;
-  background-color: red;
   transform: translateX(220%);
   transition: 0.5s ease-in-out;
 }

@@ -53,24 +53,32 @@ function mudar_main_display(display)
 {
     switch (display) {
         case "promo":
+            promocoes_btn.style.textDecoration = "underline"
+            sericos_btn.style.textDecoration = "none"
+            contato_btn.style.textDecoration = "none"
             display_main_promocoes.style.transform = "translatex(0)"
             display_main_servicos.style.transform = "translatex(110%)"
             display_main_contato.style.transform = "translatex(220%)"
             selected_ection.innerHTML = "Promoções"
             break;
         case "servi":
+            promocoes_btn.style.textDecoration = "none"
+            sericos_btn.style.textDecoration = "underline"
+            contato_btn.style.textDecoration = "none"
             display_main_promocoes.style.transform = "translatex(-110%)"
             display_main_servicos.style.transform = "translatex(0%)"
             display_main_contato.style.transform = "translatex(110%)"
             selected_ection.innerHTML = "Serviços"
             break;
         case "contact":
+            promocoes_btn.style.textDecoration = "none"
+            sericos_btn.style.textDecoration = "none"
+            contato_btn.style.textDecoration = "underline"
             display_main_promocoes.style.transform = "translatex(-220%)"
             display_main_servicos.style.transform = "translatex(-110%)"
             display_main_contato.style.transform = "translatex(0%)"
             selected_ection.innerHTML = "Contato"
             break;
-    
         default:
             break;
     }
@@ -81,9 +89,11 @@ function mudar_main_display(display)
 promocoes_btn.addEventListener("click", ()=>{
     mudar_main_display("promo")
 })
+
 sericos_btn.addEventListener("click", ()=>{
     mudar_main_display("servi")
 })
+
 contato_btn.addEventListener("click", ()=>{
     mudar_main_display("contact")
 })
