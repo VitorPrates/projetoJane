@@ -148,7 +148,7 @@ main
                 position: absolute;
                 transition: 0.5s ease-in-out;
                 // left: 0%;
-                transform: translateX(-0%);
+                transform: translateX(0%);
                 .card_produto
                 {
                     background-color: var(--claro2);
@@ -222,15 +222,67 @@ main
                 height: 90%;
                 border: 1px solid;
                 border-radius: 10px;
-                padding: 10px;
+                // padding: 10px;
+                overflow: hidden;
                 display: flex;
                 flex-wrap: wrap;
                 align-items: baseline;
                 justify-content: baseline;
                 position: absolute;
-                // left: 0%;
-                transform: translateX(110%);
+                transform: translateX(-110%);
                 transition: 0.5s ease-in-out;
+                flex-direction: column;
+                .header-servicos
+                {
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    background-color: var(--borda-clara);
+                    justify-content: baseline;
+                    gap: 20px;
+                    padding: 10px 20px;
+                    a
+                    {
+                        font-size: 25px;
+                        color: var(--preto);
+                    }
+                }
+                .selected_servico
+                {
+                    font-size: 25px;
+                    width: 100%;
+                    padding: 5px 25px;
+                }
+                .exemplos_servicos
+                {
+                    width: 100%;
+                    height: 70%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-evenly;
+                    .card_exemplo_servico
+                    {
+                        width: 327px;
+                        height: 327px;
+                        border-radius: 10px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border: 2px solid var(--preto);
+                        background-color: var(--borda-clara);
+                        font-size: 25px;
+                    }
+                }
+                .btn_agendar_servico
+                {
+                    padding: 5px 30px;
+                    font-size: 25px;
+                    background-color: var(--borda-clara);
+                    outline: none;
+                    border: 2px solid var(--preto);
+                    border-radius: 50px;
+                    margin: auto;
+                }
             }
             .display_main_contato
             {
@@ -245,8 +297,62 @@ main
                 justify-content: baseline;
                 position: absolute;
                 // left: 0%;
-                transform: translateX(220%);
+                transform: translateX(-220%);
                 transition: 0.5s ease-in-out;
+                background-color: var(--borda-clara);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                form
+                {
+                    display: flex;
+                    flex-direction: column;
+                    width: 470px;
+                    height: 500px;
+                    background-color: var(--claro1);
+                    border-radius: 10px;
+                    border: 1px solid var(--preto);
+                    align-items: center;
+                    padding: 10px;
+                    h4
+                    {
+                        font-size: 25px;
+                        font-weight: 400;
+                        margin: 0 0 10px 0;
+                    }
+                    label
+                    {
+                        font-size: 20px;
+                        width: 420px;
+                        padding-left: 20px;
+                    }
+                    label::after
+                    {
+                        content: "*";
+                        color: red;
+                    }
+                    label[for="detalhes"]
+                    {
+                        margin-top: 10px;
+                       font-size: 25px;
+                    }
+                    input
+                    {
+                        width: 420px;
+                        height: 40px;
+                        border-radius: 50px;
+                        border: 1px solid var(--preto);
+                        outline: none;
+                    }
+                    textarea
+                    {
+                        width: 420px;
+                        height: 120px;
+                        border-radius: 15px;
+                        border: 1px solid var(--preto);
+                        outline: none;
+                    }
+                }
             }
         }
         .zapzap

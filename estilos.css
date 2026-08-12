@@ -197,14 +197,60 @@ main .content .display_principal .display_main_servicos {
   height: 90%;
   border: 1px solid;
   border-radius: 10px;
-  padding: 10px;
+  overflow: hidden;
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
   justify-content: baseline;
   position: absolute;
-  transform: translateX(110%);
+  transform: translateX(-110%);
   transition: 0.5s ease-in-out;
+  flex-direction: column;
+}
+main .content .display_principal .display_main_servicos .header-servicos {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: var(--borda-clara);
+  justify-content: baseline;
+  gap: 20px;
+  padding: 10px 20px;
+}
+main .content .display_principal .display_main_servicos .header-servicos a {
+  font-size: 25px;
+  color: var(--preto);
+}
+main .content .display_principal .display_main_servicos .selected_servico {
+  font-size: 25px;
+  width: 100%;
+  padding: 5px 25px;
+}
+main .content .display_principal .display_main_servicos .exemplos_servicos {
+  width: 100%;
+  height: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+main .content .display_principal .display_main_servicos .exemplos_servicos .card_exemplo_servico {
+  width: 327px;
+  height: 327px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--preto);
+  background-color: var(--borda-clara);
+  font-size: 25px;
+}
+main .content .display_principal .display_main_servicos .btn_agendar_servico {
+  padding: 5px 30px;
+  font-size: 25px;
+  background-color: var(--borda-clara);
+  outline: none;
+  border: 2px solid var(--preto);
+  border-radius: 50px;
+  margin: auto;
 }
 main .content .display_principal .display_main_contato {
   width: 99%;
@@ -217,8 +263,55 @@ main .content .display_principal .display_main_contato {
   align-items: baseline;
   justify-content: baseline;
   position: absolute;
-  transform: translateX(220%);
+  transform: translateX(-220%);
   transition: 0.5s ease-in-out;
+  background-color: var(--borda-clara);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .content .display_principal .display_main_contato form {
+  display: flex;
+  flex-direction: column;
+  width: 470px;
+  height: 500px;
+  background-color: var(--claro1);
+  border-radius: 10px;
+  border: 1px solid var(--preto);
+  align-items: center;
+  padding: 10px;
+}
+main .content .display_principal .display_main_contato form h4 {
+  font-size: 25px;
+  font-weight: 400;
+  margin: 0 0 10px 0;
+}
+main .content .display_principal .display_main_contato form label {
+  font-size: 20px;
+  width: 420px;
+  padding-left: 20px;
+}
+main .content .display_principal .display_main_contato form label::after {
+  content: "*";
+  color: red;
+}
+main .content .display_principal .display_main_contato form label[for=detalhes] {
+  margin-top: 10px;
+  font-size: 25px;
+}
+main .content .display_principal .display_main_contato form input {
+  width: 420px;
+  height: 40px;
+  border-radius: 50px;
+  border: 1px solid var(--preto);
+  outline: none;
+}
+main .content .display_principal .display_main_contato form textarea {
+  width: 420px;
+  height: 120px;
+  border-radius: 15px;
+  border: 1px solid var(--preto);
+  outline: none;
 }
 main .content .zapzap {
   right: 2%;
