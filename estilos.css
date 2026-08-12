@@ -204,7 +204,7 @@ main .content .display_principal .display_main_servicos {
   justify-content: baseline;
   position: absolute;
   background-color: yellow;
-  transform: translateX(0%);
+  transform: translateX(110%);
   transition: 0.5s ease-in-out;
 }
 main .content .display_principal .display_main_contato {
@@ -219,7 +219,7 @@ main .content .display_principal .display_main_contato {
   justify-content: baseline;
   position: absolute;
   background-color: red;
-  transform: translateX(110%);
+  transform: translateX(220%);
   transition: 0.5s ease-in-out;
 }
 main .content .zapzap {
