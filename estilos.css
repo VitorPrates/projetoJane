@@ -121,20 +121,24 @@ main .content .display_principal p {
 main .content .display_principal .display_main_promocoes {
   width: 99%;
   height: 90%;
+  max-width: 1230px;
   border: 1px solid;
   border-radius: 10px;
-  padding: 10px;
-  display: flex;
-  flex-wrap: wrap;
+  padding: 20px 40px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
   align-items: baseline;
   justify-content: baseline;
   position: absolute;
   transition: 0.5s ease-in-out;
+  gap: 30px;
+  flex-wrap: wrap;
   transform: translateX(0%);
+  overflow: scroll;
 }
 main .content .display_principal .display_main_promocoes .card_produto {
   background-color: var(--claro2);
-  width: 186px;
+  max-width: 186px;
   height: 247px;
   border: 1px solid var(--preto);
   border-radius: 5px;
